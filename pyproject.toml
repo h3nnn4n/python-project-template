@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "python-project-template"
+version = "0.1.0"
+description = "A simple python project setup with batteries mostly included"
+authors = ["h3nnn4n <git@renan.digital>"]
+license = "MIT-0"
+readme = "README.md"
+packages = [{include = "python-project-template"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.15.0"
+ipdb = "^0.13.13"
+pynvim = "^0.4.3"
+black = "^23.9.1"
+jedi = "^0.19.0"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+flake8-bugbear = "^23.9.16"
+flake8-comprehensions = "^3.14.0"
+flake8-mutable = "^1.2.0"
+flake8-simplify = "^0.21.0"
+pyright = "^1.1.327"
+codespell = "^2.2.5"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+
+[tool.isort]
+lines_after_imports=2
+atomic=true
+combine_star=true
+multi_line_output=3
+include_trailing_comma=true
+force_grid_wrap=0
+use_parentheses=true
+line_length=88
+profile="black"
+
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "./"
+reportMissingImports = false
+
+
+[tool.codespell]
+skip = "poetry.lock"
