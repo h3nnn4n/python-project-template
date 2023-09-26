@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
-          poetry install --no-interaction --no-root
+          poetry install --no-interaction
 
       - name: Run black
         run: |
@@ -66,7 +66,7 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
-          poetry install --no-interaction --no-root
+          poetry install --no-interaction
 
       - name: Run isort
         run: |
@@ -99,7 +99,7 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
-          poetry install --no-interaction --no-root
+          poetry install --no-interaction
 
       - name: Lint with flake8
         run: |
