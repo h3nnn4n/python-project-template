@@ -1,4 +1,4 @@
-from main import always_true, always_false
+from main import always_false, always_true
 
 
 def test_always_true():
